@@ -1,10 +1,21 @@
-{% extends "posts/base.html" %}
 
-{% block title %}Home{% endblock title %}
+{% extends "posts/base.html" %}
+{% load static %}
+{% block header %}
+<header class="masthead" style="background-image: url('{% static "assets/img/home-bg.jpg" %}')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1><span class="text-danger">Omid </span><span class="text-primary">Blog</span></h1>
+                    <span class="text-success fw-bold"> -- good content for good programers --</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock header %}
 
 {% block content %}
-{% for post in posts %}
-    <h1>{{ post.title }}</h1>
-    <p>{{ post.content }}</p>
-{% endfor %}
+    <h1>Hello World</h1>
 {% endblock content %}
